@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Linq;
 using Employees.DataAccessLayer;
 using Employees.Model;
@@ -18,7 +19,6 @@ try
     {
         db.Employees.Add(new Employee
         {
-            Id = 1,
             FirstName = "Иван",
             LastName = "Иванов",
             Position = "Разработчик"

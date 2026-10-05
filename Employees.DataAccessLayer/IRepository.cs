@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Employees.DataAccessLayer
 {
-    internal class EmployeesDb
-    {
-        interface IRepository<T>
+
+   
+    
+        public interface IRepository<T> where T : class
         {
             void Create(T item);
             List<T> ReadAll();
             T ReadById(int id);
             void Delete(int id);
         }
-    }
+    
 }
