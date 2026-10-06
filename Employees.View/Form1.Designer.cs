@@ -28,12 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            dataGridViewEmployees = new DataGridView();
+            buttonAdd = new Button();
+            buttonDelete = new Button();
+            buttonRefresh = new Button();
+            textBoxFirstName = new TextBox();
+            textBoxLastName = new TextBox();
+            textBoxPosition = new TextBox();
+            labelFirstName = new Label();
+            labelLastName = new Label();
+            labelPosition = new Label();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEmployees).BeginInit();
+            SuspendLayout();
+            // 
+            // dataGridViewEmployees
+            // 
+            dataGridViewEmployees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewEmployees.Location = new Point(43, 25);
+            dataGridViewEmployees.Name = "dataGridViewEmployees";
+            dataGridViewEmployees.RowHeadersWidth = 82;
+            dataGridViewEmployees.Size = new Size(1126, 376);
+            dataGridViewEmployees.TabIndex = 0;
+            // 
+            // buttonAdd
+            // 
+            buttonAdd.Location = new Point(155, 728);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(150, 46);
+            buttonAdd.TabIndex = 1;
+            buttonAdd.Text = "добавить";
+            buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
+            // 
+            // buttonDelete
+            // 
+            buttonDelete.Location = new Point(353, 728);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(150, 46);
+            buttonDelete.TabIndex = 2;
+            buttonDelete.Text = "удалить";
+            buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
+            // 
+            // buttonRefresh
+            // 
+            buttonRefresh.Location = new Point(956, 728);
+            buttonRefresh.Name = "buttonRefresh";
+            buttonRefresh.RightToLeft = RightToLeft.No;
+            buttonRefresh.Size = new Size(150, 46);
+            buttonRefresh.TabIndex = 3;
+            buttonRefresh.Text = "обновить";
+            buttonRefresh.UseVisualStyleBackColor = true;
+            buttonRefresh.Click += buttonRefresh_Click;
+            // 
+            // textBoxFirstName
+            // 
+            textBoxFirstName.Location = new Point(336, 444);
+            textBoxFirstName.Name = "textBoxFirstName";
+            textBoxFirstName.Size = new Size(200, 39);
+            textBoxFirstName.TabIndex = 4;
+            // 
+            // textBoxLastName
+            // 
+            textBoxLastName.Location = new Point(336, 510);
+            textBoxLastName.Name = "textBoxLastName";
+            textBoxLastName.Size = new Size(200, 39);
+            textBoxLastName.TabIndex = 5;
+            // 
+            // textBoxPosition
+            // 
+            textBoxPosition.Location = new Point(336, 576);
+            textBoxPosition.Name = "textBoxPosition";
+            textBoxPosition.Size = new Size(200, 39);
+            textBoxPosition.TabIndex = 6;
+            // 
+            // labelFirstName
+            // 
+            labelFirstName.AutoSize = true;
+            labelFirstName.Location = new Point(152, 445);
+            labelFirstName.Name = "labelFirstName";
+            labelFirstName.Size = new Size(57, 32);
+            labelFirstName.TabIndex = 7;
+            labelFirstName.Text = "имя";
+            // 
+            // labelLastName
+            // 
+            labelLastName.AutoSize = true;
+            labelLastName.Location = new Point(150, 510);
+            labelLastName.Name = "labelLastName";
+            labelLastName.Size = new Size(112, 32);
+            labelLastName.TabIndex = 8;
+            labelLastName.Text = "фамилия";
+            // 
+            // labelPosition
+            // 
+            labelPosition.AutoSize = true;
+            labelPosition.Location = new Point(151, 577);
+            labelPosition.Name = "labelPosition";
+            labelPosition.Size = new Size(133, 32);
+            labelPosition.TabIndex = 9;
+            labelPosition.Text = "должность";
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1519, 843);
+            Controls.Add(labelPosition);
+            Controls.Add(labelLastName);
+            Controls.Add(labelFirstName);
+            Controls.Add(textBoxPosition);
+            Controls.Add(textBoxLastName);
+            Controls.Add(textBoxFirstName);
+            Controls.Add(buttonRefresh);
+            Controls.Add(buttonDelete);
+            Controls.Add(buttonAdd);
+            Controls.Add(dataGridViewEmployees);
+            Name = "Form1";
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEmployees).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private DataGridView dataGridViewEmployees;
+        private Button buttonAdd;
+        private Button buttonDelete;
+        private Button buttonRefresh;
+        private TextBox textBoxFirstName;
+        private TextBox textBoxLastName;
+        private TextBox textBoxPosition;
+        private Label labelFirstName;
+        private Label labelLastName;
+        private Label labelPosition;
     }
 }

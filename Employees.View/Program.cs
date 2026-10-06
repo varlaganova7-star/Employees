@@ -1,47 +1,24 @@
 ﻿using System;
-using System.Linq;
+using System.Windows.Forms;
 using Employees.DataAccessLayer;
-using Employees.Model;
 
-// Этот код выполнится сразу при запуске
-Console.WriteLine("=== Начало инициализации БД ===");
-
-try
+namespace Employees.View
 {
-    using var db = new AppDbContext();
-
-    // Создаем таблицу, если её нет
-    db.Database.EnsureCreated();
-    Console.WriteLine("Таблица проверена/создана.");
-
-    if (!db.Employees.Any())
+    internal static class Program
     {
-        db.Employees.Add(new Employee
+        [STAThread]
+        static void Main()
         {
-            Id = 1,
-            FirstName = "Иван",
-            LastName = "Иванов",
-            Position = "Разработчик"
-        });
-        db.SaveChanges();
-        Console.WriteLine("✅ Добавлен тестовый сотрудник!");
-    }
-    else
-    {
-        Console.WriteLine("✅ База данных уже содержит данные.");
-    }
+            ApplicationConfiguration.Initialize();
 
-    Console.WriteLine("=== Конец инициализации ===");
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"❌ ОШИБКА: {ex.Message}");
-    if (ex.InnerException != null)
-    {
-        Console.WriteLine($"Внутренняя ошибка: {ex.InnerException.Message}");
+            // Создаём базу и таблицу, если их ещё нет (через EF)
+            using (var db = new AppDbContext())
+            {
+                db.Database.EnsureCreated();
+            }
+
+            // Запускаем главное окно
+            Application.Run(new Form1());
+        }
     }
 }
-
-// Эта строка не даст окну закрыться, пока вы не нажмете Enter
-Console.WriteLine("\nНажмите Enter для выхода...");
-Console.ReadLine();
