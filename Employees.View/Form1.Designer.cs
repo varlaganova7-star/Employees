@@ -52,7 +52,7 @@
             // 
             // buttonAdd
             // 
-            buttonAdd.Location = new Point(155, 728);
+            buttonAdd.Location = new Point(56, 723);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(150, 46);
             buttonAdd.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             // buttonDelete
             // 
-            buttonDelete.Location = new Point(353, 728);
+            buttonDelete.Location = new Point(288, 723);
             buttonDelete.Name = "buttonDelete";
             buttonDelete.Size = new Size(150, 46);
             buttonDelete.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             // buttonRefresh
             // 
-            buttonRefresh.Location = new Point(956, 728);
+            buttonRefresh.Location = new Point(1019, 728);
             buttonRefresh.Name = "buttonRefresh";
             buttonRefresh.RightToLeft = RightToLeft.No;
             buttonRefresh.Size = new Size(150, 46);
@@ -83,21 +83,21 @@
             // 
             // textBoxFirstName
             // 
-            textBoxFirstName.Location = new Point(336, 444);
+            textBoxFirstName.Location = new Point(244, 444);
             textBoxFirstName.Name = "textBoxFirstName";
             textBoxFirstName.Size = new Size(200, 39);
             textBoxFirstName.TabIndex = 4;
             // 
             // textBoxLastName
             // 
-            textBoxLastName.Location = new Point(336, 510);
+            textBoxLastName.Location = new Point(244, 510);
             textBoxLastName.Name = "textBoxLastName";
             textBoxLastName.Size = new Size(200, 39);
             textBoxLastName.TabIndex = 5;
             // 
             // textBoxPosition
             // 
-            textBoxPosition.Location = new Point(336, 576);
+            textBoxPosition.Location = new Point(244, 576);
             textBoxPosition.Name = "textBoxPosition";
             textBoxPosition.Size = new Size(200, 39);
             textBoxPosition.TabIndex = 6;
@@ -105,7 +105,7 @@
             // labelFirstName
             // 
             labelFirstName.AutoSize = true;
-            labelFirstName.Location = new Point(152, 445);
+            labelFirstName.Location = new Point(60, 445);
             labelFirstName.Name = "labelFirstName";
             labelFirstName.Size = new Size(57, 32);
             labelFirstName.TabIndex = 7;
@@ -114,7 +114,7 @@
             // labelLastName
             // 
             labelLastName.AutoSize = true;
-            labelLastName.Location = new Point(150, 510);
+            labelLastName.Location = new Point(58, 510);
             labelLastName.Name = "labelLastName";
             labelLastName.Size = new Size(112, 32);
             labelLastName.TabIndex = 8;
@@ -123,7 +123,7 @@
             // labelPosition
             // 
             labelPosition.AutoSize = true;
-            labelPosition.Location = new Point(151, 577);
+            labelPosition.Location = new Point(59, 577);
             labelPosition.Name = "labelPosition";
             labelPosition.Size = new Size(133, 32);
             labelPosition.TabIndex = 9;
@@ -133,7 +133,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1519, 843);
+            ClientSize = new Size(1223, 843);
             Controls.Add(labelPosition);
             Controls.Add(labelLastName);
             Controls.Add(labelFirstName);
